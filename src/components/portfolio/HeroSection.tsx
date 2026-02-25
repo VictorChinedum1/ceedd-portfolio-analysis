@@ -47,8 +47,14 @@ const HeroSection = ({ name, tagline, description }: HeroSectionProps) => {
       const heroHeight = heroRef.current.offsetHeight;
       const scrollPercent = Math.min(scrolled / heroHeight, 1);
 
-      nameRef.current.style.transform = `translateY(${scrolled * 0.4}px) rotateX(${scrollPercent * 15}deg)`;
-      nameRef.current.style.opacity = `${1 - scrollPercent * 0.8}`;
+      // Enhanced bouncy effect with more dramatic movement
+      const bounceEffect = Math.sin(scrollPercent * Math.PI * 2) * 0.3;
+      const translateY = scrolled * 0.6 + bounceEffect * 20;
+      const rotateX = scrollPercent * 25;
+      const scale = 1 + bounceEffect * 0.1;
+
+      nameRef.current.style.transform = `translateY(${translateY}px) rotateX(${rotateX}deg) scale(${scale})`;
+      nameRef.current.style.opacity = `${1 - scrollPercent * 0.6}`;
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -100,13 +106,26 @@ const HeroSection = ({ name, tagline, description }: HeroSectionProps) => {
         >
           <h1 className="text-7xl sm:text-8xl md:text-9xl font-display font-black tracking-wider text-glow">
             {letters.map((letter, i) => (
-              <span
+              <motion.span
                 key={i}
-                className="inline-block text-primary animate-letter-float"
-                style={{ animationDelay: `${i * 0.15}s` }}
+                className="inline-block text-primary"
+                animate={{
+                  y: [0, -15, 0],
+                  rotate: [0, 5, -5, 0],
+                  scale: [1, 1.1, 1],
+                }}
+                transition={{
+                  duration: 2 + i * 0.2,
+                  repeat: Infinity,
+                  repeatDelay: i * 0.3,
+                  ease: "easeInOut",
+                }}
+                style={{
+                  animationDelay: `${i * 0.15}s`,
+                }}
               >
                 {letter}
-              </span>
+              </motion.span>
             ))}
           </h1>
         </motion.div>

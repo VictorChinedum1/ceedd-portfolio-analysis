@@ -1,5 +1,5 @@
 export const heroData = {
-  name: "CEEDD",
+  name: "Ceedd",
   tagline: "Creative Developer & Digital Craftsman",
   description:
     "Transforming ideas into immersive digital experiences through code and design",
