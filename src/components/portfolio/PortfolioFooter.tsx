@@ -1,4 +1,4 @@
-import { Github, Twitter, Linkedin } from "lucide-react";
+import { Github, Linkedin } from "lucide-react";
 
 const PortfolioFooter = () => {
   return (
@@ -13,15 +13,22 @@ const PortfolioFooter = () => {
         </p>
 
         <div className="flex items-center gap-4">
-          {[Github, Twitter, Linkedin].map((Icon, i) => (
-            <a
-              key={i}
-              href="#"
-              className="w-9 h-9 rounded-lg border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/40 transition-all duration-300"
-            >
-              <Icon size={16} />
-            </a>
-          ))}
+          <a
+            href="https://github.com/VictorChinedum1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-9 h-9 rounded-lg border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/40 transition-all duration-300"
+          >
+            <Github size={16} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/victor-chinedu-a8020a238"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-9 h-9 rounded-lg border border-border flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/40 transition-all duration-300"
+          >
+            <Linkedin size={16} />
+          </a>
         </div>
       </div>
     </footer>
