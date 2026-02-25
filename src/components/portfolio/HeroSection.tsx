@@ -47,14 +47,21 @@ const HeroSection = ({ name, tagline, description }: HeroSectionProps) => {
       const heroHeight = heroRef.current.offsetHeight;
       const scrollPercent = Math.min(scrolled / heroHeight, 1);
 
-      // Enhanced bouncy effect with more dramatic movement
-      const bounceEffect = Math.sin(scrollPercent * Math.PI * 2) * 0.3;
-      const translateY = scrolled * 0.6 + bounceEffect * 20;
-      const rotateX = scrollPercent * 25;
-      const scale = 1 + bounceEffect * 0.1;
+      // Smooth eased transitions with reduced bounce for smoother feel
+      const easedScroll = easeOutCubic(scrollPercent);
+      const bounceEffect = Math.sin(easedScroll * Math.PI) * 0.15; // Reduced bounce
+      const translateY = scrolled * 0.4 + bounceEffect * 10; // Gentler movement
+      const rotateX = easedScroll * 15; // Reduced rotation
+      const scale = 1 + bounceEffect * 0.05; // Subtle scaling
 
       nameRef.current.style.transform = `translateY(${translateY}px) rotateX(${rotateX}deg) scale(${scale})`;
-      nameRef.current.style.opacity = `${1 - scrollPercent * 0.6}`;
+      nameRef.current.style.opacity = `${1 - easedScroll * 0.4}`; // Gentler fade
+      nameRef.current.style.transition = "transform 0.3s ease-out, opacity 0.3s ease-out";
+    };
+
+    // Easing function for smooth transitions
+    const easeOutCubic = (t: number): number => {
+      return 1 - Math.pow(1 - t, 3);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -110,18 +117,18 @@ const HeroSection = ({ name, tagline, description }: HeroSectionProps) => {
                 key={i}
                 className="inline-block text-primary"
                 animate={{
-                  y: [0, -15, 0],
-                  rotate: [0, 5, -5, 0],
-                  scale: [1, 1.1, 1],
+                  y: [0, -8, 0], // Reduced bounce height
+                  rotate: [0, 2, -2, 0], // Reduced rotation
+                  scale: [1, 1.05, 1], // Subtle scaling
                 }}
                 transition={{
-                  duration: 2 + i * 0.2,
+                  duration: 3 + i * 0.2, // Slower animation
                   repeat: Infinity,
-                  repeatDelay: i * 0.3,
-                  ease: "easeInOut",
+                  repeatDelay: i * 0.4, // More staggered
+                  ease: "easeInOut", // Smooth easing
                 }}
                 style={{
-                  animationDelay: `${i * 0.15}s`,
+                  animationDelay: `${i * 0.1}s`, // Reduced initial delay
                 }}
               >
                 {letter}
