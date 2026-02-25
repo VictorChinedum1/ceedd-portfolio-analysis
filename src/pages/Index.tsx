@@ -3,7 +3,6 @@ import HeroSection from "@/components/portfolio/HeroSection";
 import AboutSection from "@/components/portfolio/AboutSection";
 import ProjectsSection from "@/components/portfolio/ProjectsSection";
 import SkillsSection from "@/components/portfolio/SkillsSection";
-import TestimonialsSection from "@/components/portfolio/TestimonialsSection";
 import ContactSection from "@/components/portfolio/ContactSection";
 import PortfolioFooter from "@/components/portfolio/PortfolioFooter";
 import {
@@ -11,7 +10,6 @@ import {
   aboutData,
   projectsData,
   skillsData,
-  testimonialsData,
 } from "@/data/portfolio";
 
 const Index = () => {
@@ -26,7 +24,6 @@ const Index = () => {
       <AboutSection about={aboutData} />
       <ProjectsSection projects={projectsData} />
       <SkillsSection skills={skillsData} />
-      <TestimonialsSection testimonials={testimonialsData} />
       <ContactSection />
       <PortfolioFooter />
     </div>
