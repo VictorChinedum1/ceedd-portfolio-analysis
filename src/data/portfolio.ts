@@ -9,7 +9,7 @@ export const aboutData = {
   title: "About Me",
   description:
     "I'm Victor Molokwu, a passionate developer and designer who loves creating unique digital experiences. With a focus on modern web technologies and creative problem-solving, I bring ideas to life with clean code and stunning visuals.",
-  image: "/Image/Victor.jpg",
+  image: "/Victor.jpg",
   stats: [
     { label: "Years Experience", value: "5+" },
     { label: "Projects Completed", value: "50+" },
@@ -36,7 +36,7 @@ export const projectsData = [
     tags: ["React", "Python", "TensorFlow", "D3.js"],
     featured: true,
     link: "https://ceedd-demo.preview.emergentagent.com/",
-    image: "/Image/Ceedd demo.png",
+    image: "/Ceedd-demo.png",
   },
   {
     id: 2,
