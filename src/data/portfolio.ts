@@ -1,5 +1,5 @@
 export const heroData = {
-  name: "Ceedd",
+  name: "CEEDD",
   tagline: "Creative Developer & Digital Craftsman",
   description:
     "Transforming ideas into immersive digital experiences through code and design",
@@ -8,7 +8,8 @@ export const heroData = {
 export const aboutData = {
   title: "About Me",
   description:
-    "I'm a passionate developer and designer who loves creating unique digital experiences. With a focus on modern web technologies and creative problem-solving, I bring ideas to life with clean code and stunning visuals.",
+    "I'm Victor Molokwu, a passionate developer and designer who loves creating unique digital experiences. With a focus on modern web technologies and creative problem-solving, I bring ideas to life with clean code and stunning visuals.",
+  image: "/Image/Victor.jpg",
   stats: [
     { label: "Years Experience", value: "5+" },
     { label: "Projects Completed", value: "50+" },
@@ -29,11 +30,13 @@ export const skillsData = [
 export const projectsData = [
   {
     id: 1,
-    title: "Neural Dashboard",
+    title: "CEEDD Demo",
     description:
-      "AI-powered analytics platform with real-time data visualization and predictive insights.",
+      "Advanced portfolio analysis platform showcasing modern web development capabilities with interactive data visualization.",
     tags: ["React", "Python", "TensorFlow", "D3.js"],
     featured: true,
+    link: "https://ceedd-demo.preview.emergentagent.com/",
+    image: "/Image/Ceedd demo.png",
   },
   {
     id: 2,

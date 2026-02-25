@@ -6,6 +6,7 @@ interface AboutSectionProps {
   about: {
     title: string;
     description: string;
+    image?: string;
     stats: { label: string; value: string }[];
   };
 }
@@ -27,9 +28,25 @@ const AboutSection = ({ about }: AboutSectionProps) => {
           <h2 className="text-4xl md:text-5xl font-display font-bold gradient-text inline-block mb-6">
             {about.title}
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto font-body leading-relaxed">
-            {about.description}
-          </p>
+          <div className="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto">
+            {about.image && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : {}}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="shrink-0"
+              >
+                <img
+                  src={about.image}
+                  alt="Victor Molokwu"
+                  className="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover border-4 border-primary/20 box-glow"
+                />
+              </motion.div>
+            )}
+            <p className="text-lg text-muted-foreground font-body leading-relaxed text-left">
+              {about.description}
+            </p>
+          </div>
         </motion.div>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">

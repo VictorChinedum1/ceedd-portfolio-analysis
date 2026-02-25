@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useState } from "react";
-import { Send, Mail, MapPin, Phone } from "lucide-react";
+import { Send, Mail, MapPin, Phone, Github, Linkedin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const ContactSection = () => {
@@ -49,9 +49,9 @@ const ContactSection = () => {
             className="md:col-span-2 space-y-6"
           >
             {[
-              { icon: Mail, label: "Email", value: "hello@ceedd.dev" },
-              { icon: MapPin, label: "Location", value: "San Francisco, CA" },
-              { icon: Phone, label: "Phone", value: "+1 (555) 123-4567" },
+              { icon: Mail, label: "Email", value: "victormolokwu75@gmail.com" },
+              { icon: MapPin, label: "Location", value: "Nigeria" },
+              { icon: Phone, label: "Phone", value: "+23481047832529" },
             ].map((item) => (
               <div key={item.label} className="flex items-start gap-4">
                 <div className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center shrink-0">
@@ -67,6 +67,36 @@ const ContactSection = () => {
                 </div>
               </div>
             ))}
+            
+            {/* Social Media Links */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={isInView ? { opacity: 1, y: 0 } : {}}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="pt-4"
+            >
+              <div className="text-sm text-muted-foreground font-body mb-3">
+                Connect with me
+              </div>
+              <div className="flex gap-3">
+                <a
+                  href="https://github.com/VictorChinedum1"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center hover:bg-primary/20 transition-colors"
+                >
+                  <Github size={18} className="text-primary" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/victor-chinedu-a8020a238"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-10 h-10 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center hover:bg-primary/20 transition-colors"
+                >
+                  <Linkedin size={18} className="text-primary" />
+                </a>
+              </div>
+            </motion.div>
           </motion.div>
 
           {/* Form */}
