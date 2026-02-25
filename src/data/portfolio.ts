@@ -9,7 +9,7 @@ export const aboutData = {
   title: "About Me",
   description:
     "I'm Victor Molokwu, a passionate developer and designer who loves creating unique digital experiences. With a focus on modern web technologies and creative problem-solving, I bring ideas to life with clean code and stunning visuals.",
-  image: "/logo.png",
+  image: "/Victor.jpg",
   stats: [
     { label: "Years Experience", value: "5+" },
     { label: "Projects Completed", value: "50+" },
