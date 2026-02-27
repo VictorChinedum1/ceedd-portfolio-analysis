@@ -37,9 +37,13 @@ const PortfolioHeader = () => {
         <div className="flex items-center justify-between">
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="font-display text-2xl font-bold text-primary text-glow-sm"
+            className="flex items-center"
           >
-            Ceedd
+            <img
+              src="/logo.png"
+              alt="Ceedd Logo"
+              className="h-8 w-auto"
+            />
           </button>
 
           {/* Desktop nav */}
