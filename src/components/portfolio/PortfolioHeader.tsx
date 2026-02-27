@@ -42,7 +42,7 @@ const PortfolioHeader = () => {
             <img
               src="/logo.png"
               alt="Ceedd Logo"
-              className="h-8 w-auto"
+              className="h-12 w-auto"
             />
           </button>
 
