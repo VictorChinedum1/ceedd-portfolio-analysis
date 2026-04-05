@@ -1,6 +1,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 interface Project {
   id: number;
@@ -25,17 +26,17 @@ const ProjectsSection = ({ projects }: { projects: Project[] }) => {
             src={project.image}
             alt={project.title}
             className="w-full h-full object-cover"
+            onError={(e) => {
+              e.currentTarget.style.display = 'none';
+              e.currentTarget.parentElement!.querySelector('.fallback')?.classList.remove('hidden');
+            }}
           />
-        ) : (
-          <>
-            <div className="absolute inset-0 grid-bg opacity-60" />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="font-display text-2xl font-bold text-primary/30 group-hover:text-primary/60 transition-colors">
-                {project.title.charAt(0)}
-              </span>
-            </div>
-          </>
-        )}
+        ) : null}
+        <div className="fallback absolute inset-0 bg-gradient-to-br from-primary/20 to-secondary/30 flex items-center justify-center">
+          <span className="font-display text-2xl font-bold text-primary/60 group-hover:text-primary/80 transition-colors">
+            {project.title.charAt(0)}
+          </span>
+        </div>
         {project.featured && (
           <span className="absolute top-3 right-3 px-2 py-1 bg-primary/20 text-primary text-xs font-display rounded border border-primary/30">
             Featured
@@ -114,6 +115,22 @@ const ProjectsSection = ({ projects }: { projects: Project[] }) => {
             </motion.div>
           ))}
         </div>
+
+        {/* View All Button */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="text-center mt-12"
+        >
+          <Link
+            to="/projects"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-display font-semibold rounded-lg hover:bg-primary/90 transition-all duration-300 hover:scale-105 box-glow"
+          >
+            View All Projects
+            <ArrowRight size={18} />
+          </Link>
+        </motion.div>
       </div>
     </section>
   );

@@ -40,43 +40,138 @@ export const projectsData = [
   },
   {
     id: 2,
+    title: "Furniture Store",
+    description:
+      "Modern e-commerce furniture platform with 3D product previews, room planner, and seamless checkout experience.",
+    tags: ["Next.js", "Three.js", "Stripe", "Vercel"],
+    featured: true,
+    link: "https://furniture-temp.vercel.app/",
+    image: "/project-placeholder.svg",
+  },
+  {
+    id: 3,
+    title: "Transaction Ledger",
+    description:
+      "Comprehensive financial management app with real-time transaction tracking, budget analytics, and expense reporting.",
+    tags: ["React", "TypeScript", "Chart.js", "Vercel"],
+    featured: true,
+    link: "https://my-transaction-ledger.vercel.app/",
+    image: "/project-placeholder.svg",
+  },
+  {
+    id: 4,
+    title: "New Portfolio Design",
+    description:
+      "Modern portfolio website with sleek design, smooth animations, and responsive layout optimized for all devices.",
+    tags: ["React", "TailwindCSS", "Framer Motion", "Netlify"],
+    featured: true,
+    link: "https://newportifolio-design.netlify.app/",
+    image: "/project-placeholder.svg",
+  },
+  {
+    id: 5,
+    title: "Stire Agency",
+    description:
+      "Creative digital agency website with stunning animations, case studies, and client showcase.",
+    tags: ["Vue.js", "GSAP", "Sass", "Vercel"],
+    featured: true,
+    link: "https://stire-agency.vercel.app/",
+    image: "/project-placeholder.svg",
+  },
+  {
+    id: 6,
+    title: "CEEDD Gold",
+    description:
+      "Premium investment and trading platform with real-time market data, portfolio tracking, and analytics dashboard.",
+    tags: ["React", "Redux", "WebSocket", "Netlify"],
+    featured: false,
+    link: "https://ceeddgold.netlify.app/",
+    image: "/project-placeholder.svg",
+  },
+  {
+    id: 7,
+    title: "CEEDD Care",
+    description:
+      "Healthcare management platform with patient records, appointment scheduling, and telemedicine features.",
+    tags: ["Next.js", "Node.js", "MongoDB", "Netlify"],
+    featured: false,
+    link: "https://ceeddcare.netlify.app/",
+    image: "/project-placeholder.svg",
+  },
+  {
+    id: 8,
+    title: "Home Aesthetic",
+    description:
+      "Interior design and home decor platform with beautiful galleries, inspiration boards, and e-commerce functionality.",
+    tags: ["Next.js", "TypeScript", "Stripe", "Cloudinary"],
+    featured: false,
+    link: "https://homeasthetic.netlify.app/",
+    image: "/project-placeholder.svg",
+  },
+  {
+    id: 9,
+    title: "Cafe Spada",
+    description:
+      "Elegant coffee shop website with online ordering system, menu showcase, and reservation booking functionality.",
+    tags: ["React", "Node.js", "MongoDB", "Stripe"],
+    featured: false,
+    link: "https://cafespada.netlify.app/",
+    image: "/project-placeholder.svg",
+  },
+  {
+    id: 10,
+    title: "Apex Clean",
+    description:
+      "Professional cleaning service platform with booking system, service packages, and customer management dashboard.",
+    tags: ["Vue.js", "Express", "PostgreSQL", "Netlify"],
+    featured: false,
+    link: "https://app.netlify.com/projects/apexclean/",
+    image: "/project-placeholder.svg",
+  },
+  {
+    id: 11,
     title: "Quantum Commerce",
     description:
       "Next-gen e-commerce platform with AR product previews and blockchain payments.",
     tags: ["Next.js", "Three.js", "Solidity", "WebXR"],
-    featured: true,
+    featured: false,
+    image: "/project-placeholder.svg",
   },
   {
-    id: 3,
+    id: 12,
     title: "SoundWave Studio",
     description:
       "Browser-based audio production suite with real-time collaboration features.",
     tags: ["Web Audio API", "WebRTC", "React", "Node.js"],
-    featured: true,
+    featured: false,
+    image: "/project-placeholder.svg",
   },
   {
-    id: 4,
+    id: 13,
     title: "Nexus CMS",
     description:
       "Headless CMS with visual builder and multi-channel content distribution.",
     tags: ["GraphQL", "MongoDB", "React", "AWS"],
     featured: false,
+    image: "/project-placeholder.svg",
   },
   {
-    id: 5,
+    id: 14,
     title: "Velocity Tracker",
     description:
       "Performance monitoring tool with custom metrics and alerting system.",
     tags: ["TypeScript", "PostgreSQL", "Docker", "Grafana"],
     featured: false,
+    image: "/project-placeholder.svg",
   },
   {
-    id: 6,
+    id: 15,
     title: "Prism Gallery",
     description:
       "Interactive 3D art gallery with VR support and NFT integration.",
     tags: ["Three.js", "WebGL", "Ethereum", "IPFS"],
     featured: false,
+    image: "/project-placeholder.svg",
   },
 ];
 
